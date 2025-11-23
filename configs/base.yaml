@@ -1,0 +1,13 @@
+data_path: "data/raw/RFM.csv"
+features: ["R","F","M"]
+log_transform: ["F","M"]      # 如无需对数化，设 []
+k: 5
+n_init: 50
+random_state: 42
+outputs:
+  processed_np: "data/processed/rfm_scaled.npy"
+  model_path: "models/kmeans_rfm.joblib"
+  clustered_csv: "reports/clustered_output.csv"
+  profile_csv: "reports/cluster_profile.csv"
+  elbow_png: "reports/figures/elbow.png"
+  pca_png: "reports/figures/pca_k5.png"
